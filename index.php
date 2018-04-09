@@ -42,11 +42,11 @@
 					<a href="#" class="bt-menu-trigger"><span>Menu</span></a>
 
 					<ul class="toggle-menu">
-						<li><a href="">О нас</a></li>
-						<li><a href="">Наши объекты</a></li>
-						<li class="menu-button"><a href="">Написать нам</a></li>
-						<li><a href="">Отзывы</a></li>
-						<li><a href="">Контакты</a></li>
+						<li><a href="#about">О нас</a></li>
+						<li><a href="#objects">Наши объекты</a></li>
+						<li class="menu-button"><a href="#form" class="popup">Написать нам</a></li>
+						<li><a href="#reviews">Отзывы</a></li>
+						<li><a href="#contacts">Контакты</a></li>
 						<li>Закрыть</li>
 					</ul>
 				</div>
@@ -77,28 +77,7 @@
 	</header>
     
     <nav id="menu1">
-    	<div class="hide-menu">
-    		<img src="images/logo.png">
-	    	<a href="#about">О нас</a>
-	    	<a href="#objects">Наши Объекты</a>
-	    	<a href="#reviews">Отзывы</a>
-	    	<a href="#contacts">Контакты</a>
-	    	<a href="#form" class="popup">Написать нам</a>
-	    </div>
-
-	    <div class="top-contacts">
-					<div class="number"><span>+79658847968</span></div>
-					<a href="#" class="bt-menu-trigger"><span>Menu</span></a>
-
-					<ul class="toggle-menu">
-						<li><a href="">О нас</a></li>
-						<li><a href="">Наши объекты</a></li>
-						<li class="menu-button"><a href="">Написать нам</a></li>
-						<li><a href="">Отзывы</a></li>
-						<li><a href="">Контакты</a></li>
-						<li>Закрыть</li>
-					</ul>
-				</div>
+    	
     </nav>
 
 
@@ -394,6 +373,12 @@
 					$('body,html').animate({scrollTop: top}, 1500);
 				});
 				$(".header-menu").on("click","a", function (event) {
+					event.preventDefault();
+					var id  = $(this).attr('href'),
+					top = $(id).offset().top;
+					$('body,html').animate({scrollTop: top}, 1500);
+				});
+				$(".toggle-menu").on("click","a", function (event) {
 					event.preventDefault();
 					var id  = $(this).attr('href'),
 					top = $(id).offset().top;
