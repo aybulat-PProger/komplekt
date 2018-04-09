@@ -1,0 +1,638 @@
+body {
+	overflow-x: hidden;
+}
+
+.hidden{
+	display: none;
+}
+
+form{
+	padding: 50px 20px;
+	background-color: #fff;
+	max-width: 320px;
+	margin:auto;
+	position: relative;
+	border-radius: 10px;
+	background-color:  #fcc76b ;
+	border: 2px solid #fb8f3a;
+	z-index: 1000;
+}
+
+form p{
+	width: 100%;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+form hr{
+        width: 100%;
+        border-width: 1px;
+        border-color: #fb8f3a;
+      }
+
+form input{
+	width: 200px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	border: 2px solid #fb8f3a;
+}
+
+form textarea{
+	border-radius: 5px;
+	border: 2px solid #fb8f3a;
+}
+
+form span{
+	font-size: 1em;
+}
+
+form #check{
+	width: 10px;
+	margin: 0 0 0 10px;
+	position: relative;
+}
+
+form button{
+	margin: 0 auto;
+	display: block;
+	width: 150px;
+	background-color: #fb8f3a;
+	padding:10px 15px;
+	text-decoration: none;
+	text-align: center;
+	font-size: 1.2em;
+	color: #fff;
+	border-radius: 10px;
+	border: none;
+	cursor: pointer;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+a{
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: none;
+}
+
+li{
+	list-style: none;
+}
+
+body{
+	overflow-x: hidden;
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+
+/*Шапка*/
+header{
+	position: relative;
+	height: 100vh;
+	width: 100vw;
+	background-size: cover;
+	background-position: center;
+	background-image: url(images/bg-blur.jpg);
+}
+
+.mask{
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0,0,0, 0.7);
+	z-index: 1;
+	position: relative;
+}
+/*Верхняя часть шапки с контактами и лого*/
+.top-container{
+	width: 100%;
+	height: 80px;
+	background-color: #242424;
+}
+
+.logo{
+	position: absolute;
+	height: 105px;
+	width: 105px;
+	margin-left: 40px;
+}
+.logo img{
+	height: 100%;
+}
+
+.top-contacts{
+	display: block;
+	width: 80%;
+	color: #fff;
+	float: right;
+}
+
+.top-contacts .top-item{
+	padding-top: 28px;
+	width: 24%;
+	float: left;
+	text-align: center;
+}
+.top-contacts>.top-item>span{
+	font-size: 1.4em;
+	padding-bottom: 17px;
+	border-bottom: 4px solid #F2994A;
+}
+
+.bt-menu-trigger {
+    position: absolute;
+    top: 25px;
+    right: 10px;
+    display: block;
+    width: 35px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.bt-menu-trigger span {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    float: right;
+    display: block;
+    width: 30px;
+    height: 5px;
+    border-radius: 2px;
+    margin-top: -2px;
+    background-color: #F2994A;
+    font-size: 0px;
+    user-select: none;
+    transition: background-color 0.3s;
+}
+
+.bt-menu-trigger span:before,
+.bt-menu-trigger span:after {
+    position: absolute;
+    height: 100%;
+    right: 0;
+    background: #F2994A;
+    content: '';
+    border-radius: 2px;
+    transition: transform 0.3s;
+}
+
+.bt-menu-trigger span:before {
+	width: 35px;
+    transform: translateY(-200%);
+}
+
+.bt-menu-trigger span:after {
+	width: 25px;
+    transform: translateY(200%);
+}
+
+/*Раскрывающееся меню*/
+
+.toggle-menu{
+	display: none;
+	position: absolute;
+	right: 0;
+	margin-top: 80px;
+	width: 100vw;
+	height: 100vh;
+	max-width: 420px;
+	padding-left: 0px;
+	z-index: 1
+}
+
+.toggle-menu li{
+	box-shadow: inset 0px 5px 5px rgba(0,0,0, 0.3);
+	text-align: center;
+	padding-top: 25px;
+	height: 80px;
+	background-color: #242424;
+}
+
+.toggle-menu li a{
+	color: #fff;
+	display: block;
+	width: 100%;
+	height: 100%;
+	font-size: 1.5em;
+}
+
+.toggle-menu .menu-button{
+	background-color: #403F3D;
+	box-shadow: none;
+}
+
+.toggle-menu .menu-button a{
+	height: 50px;
+	width: 250px;
+	background-color: #F2994A;
+	margin: -10px auto 0 auto;
+	padding-top: 6px;
+	color: #fff;
+	box-shadow: 0px 5px 5px rgba(0,0,0, 0.4);
+}
+
+/*Слоган компании*/
+
+.slogan{
+	height: 53px;
+	position: absolute;
+	top: 40%;
+	margin-top: -50px;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	font-size: 2.5em;
+}
+
+
+/*Медиа-запросы*/
+
+@media screen and (min-width: 1020px)
+{
+	.bt-menu-trigger{
+		visibility: hidden;
+	}
+}
+
+@media screen and (max-width: 1020px)
+{
+	.logo{
+		top: 5px;
+		height: 70px;
+		width: 70px;
+	}
+	.top-item{
+		display: none;
+		visibility: hidden;
+	}
+	.top-contacts{
+		position: absolute;
+		width: 100%;
+	}
+	.top-contacts .top-item{
+		width: 100%;
+	}
+	.number{
+		position: absolute;
+		display: block;
+		visibility: visible;
+		font-size: 1em;
+	}
+	.logo{
+		margin-left: 0px;
+	}
+}
+
+@media screen and (max-width: 768px)
+{
+	.slogan{
+		font-size: 2.3em;
+	}
+}
+
+@media screen and (max-width: 321px)
+{
+	.slogan{
+		font-size: 1.6em;
+	}
+}
+
+/*menu*/
+
+nav{
+	display: none;
+	float: left;
+	height: 80px;
+	background-color: rgba(0,0,0,0.9);
+	width: 100%;
+	z-index: 1001;
+}
+
+.hamburger{
+	float: left;
+	display: inline;
+	cursor: pointer;
+}
+
+.hamburger img{
+	height: 40px;
+	margin-top: 20px;
+	margin-left: 10px;
+}
+
+
+.mob-menu{
+	display: none;
+	height: 100vh;
+	background-color: rgba(0,0,0,0.5);
+	margin-top: 80px;
+}
+
+.mob-menu a{
+	display: block;
+	position: relative;
+	padding:10px 0px;
+}
+
+nav img{
+	height: 75px;
+	margin-left: 2%;
+}
+
+nav a{
+	display: inline;
+	color:#fff;
+	font-size: 20px;
+	margin-left: 5%;
+	padding-top: 20px;
+	text-decoration: none;
+}
+
+nav a:hover{
+	color: silver;
+}
+
+.fixed{
+	display: block;
+	position: fixed;
+	top: 0;
+}
+
+.hide-menu a:last-child{
+	height: 80px;
+	background-color: #fb8f3a;
+	padding: 20px 30px 20px 30px;
+	float: right;
+	margin-left: 0px;
+}
+
+@media screen and (max-width: 980px)
+{
+	.hide-menu a:last-child{
+		padding: 20px 15px;
+	}
+	nav a{
+		margin-left: 3%;
+		font-size: 18px;
+	}
+}
+
+@media screen and (min-width: 785px)
+{
+	.hamburger{
+		display: none;
+		visibility: hidden;
+	}
+}
+
+@media screen and (max-width: 784px)
+{
+	.hide-menu{
+		display: none;
+		visibility: hidden;
+	}
+}
+
+
+
+/*sections*/
+
+section{
+	position: relative;
+	padding-bottom: 50px;
+}
+
+footer{
+	position: relative;
+}
+
+.sections-name{
+	width: 100%;
+	text-align: center;
+	font-size: 30px;
+	padding-top: 50px;
+	padding-bottom: 20px;
+}
+
+hr{
+	border: 2px solid #fb8f3a;
+	width: 20%;
+	margin: 10px auto;
+}
+
+/*О нас*/
+
+
+/*Наши объекты*/
+.our-objects{
+	background-color: #FFFDF5;
+}
+.slider{
+
+	margin-top: 50px;
+	width: 90%;
+	margin: 0 auto;
+}
+.object img{
+	width: 100%;
+}
+.object h4{
+	margin-top: 20px;
+}
+
+.object{
+	background-color: #fff;
+	margin: 20px 20px; 
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+.object:hover{
+	background-color:  #dcdcdc;
+
+}
+.object a{
+	display: block;
+	margin: 0px auto 20px auto;
+	color:black;
+	width: 100px;
+	background-color: #fb8f3a;
+	text-align: center;
+	padding: 10px 0px;
+}
+
+.object h4, h5, p{
+	padding: 0 20px;
+}
+
+.object p{
+	text-align: center;
+}
+/*Отзывы*/
+
+.reviews-slider{
+}
+	.reviews-slide{
+		text-align: center;
+	}
+		.img-wrap{
+			margin: 30px 0px;
+			display: inline-block;
+		}	
+			.img-wrap img{
+				width: 150px;
+				height: 150px;
+				display: inline-block;
+				border-radius: 10em;
+				overflow: hidden;
+				box-shadow: 0 0 0 7px #fb8f3a;
+			}
+		.review-slide-descr{
+			margin-top: 15px;
+		}
+		.reviews-slide h4{
+			margin:20px 0px;
+		}
+		.reviews-slide p{
+			margin:30px 0px;
+		}
+		.prev, .next{
+			display: block;
+			height: 70px;
+			width: 40px;
+			position: absolute;
+			z-index: 1000;
+			background-color: transparent;
+			background-size: cover;
+			background-position: center;
+			border:none;
+			top:200px;
+		}
+		.prev{
+			background-image: url(images/prev.png);
+			left: -55px;
+		}
+		.next{
+			background-image: url(images/next.png);
+			right: -55px;
+		}
+
+		@media screen and (max-width: 1024px){
+			.prev{
+				left: -40px;
+			}
+
+			.next{
+				right: -40px;
+			}
+		}
+
+
+
+
+/*Контакты*/
+
+.contacts-content{
+	margin: 50px 0px;
+}
+
+.contacts p{
+	display: block;
+	border-left: 3px solid #fb8f3a;
+	padding-left: 20px; 
+	margin: 10px 0px;
+	font-size: 20px;
+}
+
+.contacts-button{
+	display: block;
+	margin-top: 50px;
+	background:#fb8f3a;
+  color:#fff;
+  border:none;
+  position:relative;
+  height:70px;
+  font-size:20px;
+  padding:17px 50px;
+  text-align: center;
+  text-decoration: none;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+
+.contacts-button:hover{
+  text-decoration: none;
+	background-color: white;
+	color: #fb8f3a;
+}
+
+.contacts-button:before,.contacts-button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:3px;
+  width:0;
+  background: #fb8f3a;
+  transition:400ms ease all;
+}
+.contacts-button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.contacts-button:hover:before,.contacts-button:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+/*Подвал*/
+footer{
+	background-color:  #dcdcdc;
+}
+
+.copyright, .company, .soc-networks{
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+.copyright img{
+	height: 40px;
+}
+
+.soc-networks a{ 
+	display: block;
+	position: relative;
+	float: left;
+	margin-right: 10px;
+	height: 50px;
+	width: 50px;
+	background-size: cover;
+}
+
+#vk{
+	background-image: url(images/vk-gray.png);
+}
+	#vk:hover{
+		background-image: url(images/vk-hover.png);
+	}
+#instagram{
+	background-image: url(images/instagram-gray.png);
+}
+	#instagram:hover{
+		background-image: url(images/instagram-hover.png);
+	}
+
+#twitter{
+	background-image: url(images/twitter-gray.png);
+	height: 45px;
+	width: 45px;
+}
+	#twitter:hover{
+		background-image: url(images/twitter-hover.png);
+	}
+/*#9B9B9B #646363*/
