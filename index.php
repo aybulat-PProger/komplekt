@@ -77,7 +77,24 @@
 	</header>
     
     <nav id="menu1">
-    	
+    	<div class="hide-menu">
+    		<img src="images/logo.png">
+    		<a href="#about">О нас</a>
+    		<a href="#objects">Наши объекты</a>
+    		<a href="#reviews">Отзывы</a>
+    		<a href="#contacts">Контакты</a>
+    		<a href="#form" class="popup">Написать нам</a>
+    	</div>
+    	<span class="number-menu">+79658847968</span>
+    	<a href="#" class="hamburger"><span>Menu</span></a>
+    	<ul class="toggle-menu1">
+			<li><a href="#about">О нас</a></li>
+			<li><a href="#objects">Наши объекты</a></li>
+			<li class="menu-button"><a href="#form" class="popup">Написать нам</a></li>
+			<li><a href="#reviews">Отзывы</a></li>
+			<li><a href="#contacts">Контакты</a></li>
+			<li>Закрыть</li>
+		</ul>
     </nav>
 
 
@@ -339,10 +356,10 @@
             });
 
             $('.hamburger').click(function(){
-            	if($('.toggle-menu').is(':visible'))
-            		$('.toggle-menu').hide();
+            	if($('.toggle-menu1').is(':visible'))
+            		$('.toggle-menu1').hide();
             	else
-            		$('.toggle-menu').show();
+            		$('.toggle-menu1').show();
             });
 
             $(document).scroll(function(){
