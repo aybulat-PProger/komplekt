@@ -1,6 +1,8 @@
 <html>
 <head>
 	<title>	ООО Комплект</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -42,11 +44,11 @@
 					<a href="#" class="bt-menu-trigger"><span>Menu</span></a>
 
 					<ul class="toggle-menu">
-						<li><a href="#about">О нас</a></li>
-						<li><a href="#objects">Наши объекты</a></li>
-						<li class="menu-button"><a href="#form" class="popup">Написать нам</a></li>
-						<li><a href="#reviews">Отзывы</a></li>
-						<li><a href="#contacts">Контакты</a></li>
+						<li><a href="#about" onclick="hide1()">О нас</a></li>
+						<li><a href="#objects" onclick="hide1()">Наши объекты</a></li>
+						<li class="menu-button"><a href="#form" class="popup" onclick="hide1()">Написать нам</a></li>
+						<li><a href="#reviews" onclick="hide1()">Отзывы</a></li>
+						<li><a href="#contacts" onclick="hide1()">Контакты</a></li>
 						<li>Закрыть</li>
 					</ul>
 				</div>
@@ -73,26 +75,32 @@
 				<div class="menu-item"><a href="#reviews">Отзывы</a></div>
 				<div class="menu-item"><a href="#contacts">Контакты</a></div>
 			</div>
+
+			<div class="feedback-header">
+				<a href="#form" class="popup">Написать нам</a>
+			</div>
 		</div>
 	</header>
     
     <nav id="menu1">
-    	<div class="hide-menu">
+    	<div class="logo-menu">
     		<img src="images/logo.png">
+    	</div>
+    	<div class="hide-menu">
     		<a href="#about">О нас</a>
     		<a href="#objects">Наши объекты</a>
     		<a href="#reviews">Отзывы</a>
     		<a href="#contacts">Контакты</a>
     		<a href="#form" class="popup">Написать нам</a>
     	</div>
-    	<span class="number-menu">+79658847968</span>
+    	<div class="number-container"><span class="number-menu">+79658847968</span></div>
     	<a href="#" class="hamburger"><span>Menu</span></a>
     	<ul class="toggle-menu1">
-			<li><a href="#about">О нас</a></li>
-			<li><a href="#objects">Наши объекты</a></li>
-			<li class="menu-button"><a href="#form" class="popup">Написать нам</a></li>
-			<li><a href="#reviews">Отзывы</a></li>
-			<li><a href="#contacts">Контакты</a></li>
+			<li><a href="#about" onclick="hide()">О нас</a></li>
+			<li><a href="#objects" onclick="hide()">Наши объекты</a></li>
+			<li class="menu-button"><a href="#form" class="popup" onclick="hide()">Написать нам</a></li>
+			<li><a href="#reviews" onclick="hide()">Отзывы</a></li>
+			<li><a href="#contacts" onclick="hide()">Контакты</a></li>
 			<li>Закрыть</li>
 		</ul>
     </nav>
@@ -347,6 +355,19 @@
         		});
         	</script>
         <script>
+        	function hide(){
+        		if($('.toggle-menu1').is(':visible'))
+            		$('.toggle-menu1').hide();
+            	else
+            		$('.toggle-menu1').show();
+        	}
+
+        	function hide1(){
+        		if($('.toggle-menu').is(':visible'))
+            		$('.toggle-menu').hide();
+            	else
+            		$('.toggle-menu').show();
+        	}
 
             $('.bt-menu-trigger').click(function(){
             	if($('.toggle-menu').is(':visible'))

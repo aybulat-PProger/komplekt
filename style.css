@@ -271,6 +271,9 @@ header{
 	padding-top: 1em;
 }
 
+.feedback-header{
+	display: none;
+}
 /*Медиа-запросы*/
 
 @media screen and (min-width: 1020px)
@@ -314,6 +317,30 @@ header{
 	.slogan{
 		font-size: 2.3em;
 	}
+	.header-menu{
+		display: none
+	}
+	.feedback-header{
+		display: block;
+		position: absolute;
+		left: 15%;
+		right: 15%;
+		width: 70%;
+		bottom: 10px;
+		text-align: center;
+		height: 60px;
+		font-size: 1.4em;
+		background-color: #F2994A;
+		padding-top: 15px;
+		box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);
+		box-shadow: inset 0px 5px 5px rgba(255, 255, 255, 0.4);
+	}
+	.feedback-header a{
+		height: 100%;
+		width: 100%;
+		display: block;
+		color: #fff;
+	}
 }
 
 @media screen and (max-width: 321px)
@@ -344,9 +371,11 @@ nav a{
 	display: inline;
 	color:#fff;
 	font-size: 20px;
-	margin-left: 5%;
+	margin-left: 3%;
 	padding-top: 20px;
 	text-decoration: none;
+	display: block;
+	float: left;
 }
 
 nav a:hover{
@@ -365,6 +394,9 @@ nav a:hover{
 	padding: 20px 30px 20px 30px;
 	float: right;
 	margin-left: 0px;
+}
+.hide-menu{
+	padding-left: 80px;
 }
 
 .hamburger {
@@ -418,7 +450,6 @@ nav a:hover{
 	display: none;
 	position: absolute;
 	right: 0;
-	margin-top: 50px;
 	width: 100vw;
 	height: 100vh;
 	max-width: 420px;
@@ -457,6 +488,30 @@ nav a:hover{
 	box-shadow: 0px 5px 5px rgba(0,0,0, 0.4);
 }
 
+.number-container{
+	text-align: center;
+	height: 80px;
+}
+
+.number-menu{
+	visibility: hidden;
+	line-height: 3.4em;
+	padding-bottom: 23px;
+	height: 80px;
+	font-size: 1.4em;
+	top: 20px;
+	border-bottom: 4px solid #F2994A;
+	color: #fff;
+}
+
+.logo-menu{
+	position: absolute;
+	top: 5px;
+}
+.logo-menu img{
+	height: 70px;
+}
+
 @media screen and (max-width: 980px)
 {
 	.hide-menu a:last-child{
@@ -478,6 +533,13 @@ nav a:hover{
 
 @media screen and (max-width: 784px)
 {
+
+	.number-menu{
+		visibility: visible;
+	}
+	.hide-menu img{
+		display: block;
+	}
 	.hide-menu{
 		display: none;
 		visibility: hidden;
