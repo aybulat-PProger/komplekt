@@ -47,6 +47,7 @@ form span{
 }
 
 form #check{
+	transform: scale(1.6);
 	width: 10px;
 	margin: 0 0 0 10px;
 	position: relative;
@@ -115,12 +116,14 @@ header{
 
 .logo{
 	position: absolute;
-	height: 105px;
-	width: 105px;
+	top: -7px;
+	height: 100px;
+	width: 100px;
 	margin-left: 40px;
 }
 .logo img{
-	height: 100%;
+	height: 120px;
+	margin-top: 5px;
 }
 
 .top-contacts{
@@ -132,7 +135,7 @@ header{
 
 .top-contacts .top-item{
 	padding-top: 28px;
-	width: 24%;
+	width: 25%;
 	float: left;
 	text-align: center;
 }
@@ -160,7 +163,6 @@ header{
     display: block;
     width: 30px;
     height: 5px;
-    border-radius: 2px;
     margin-top: -2px;
     background-color: #F2994A;
     font-size: 0px;
@@ -175,7 +177,6 @@ header{
     right: 0;
     background: #F2994A;
     content: '';
-    border-radius: 2px;
     transition: transform 0.3s;
 }
 
@@ -255,6 +256,8 @@ header{
 	bottom: 0px;
 	height: 80px;
 	width: 100%;
+	background-color: #242424;
+	box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25)
 }
 .menu-item{
 	float: left;
@@ -266,11 +269,24 @@ header{
 	text-align: center;
 	display: block;
 	height: 80px;
-	background-color: #242424;
 	font-size: 1.4em;
-	padding-top: 1em;
+	padding-top: 1em;;
 }
 
+.menu-item a:hover{
+	color: #F2994A;
+}
+
+
+.feedback-btn a{
+	background: #F2994A;
+	background-blend-mode: hard-light;
+	box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.feedback-btn a:hover{
+	color: #fff;
+}
 .feedback-header{
 	display: none;
 }
@@ -285,10 +301,10 @@ header{
 
 @media screen and (max-width: 1020px)
 {
-	.logo{
-		top: 5px;
-		height: 70px;
-		width: 70px;
+	.logo img{
+		margin-top: 10px;
+		height: 80px;
+		width: 80px;
 	}
 	.top-item{
 		display: none;
@@ -300,12 +316,6 @@ header{
 	}
 	.top-contacts .top-item{
 		width: 100%;
-	}
-	.number{
-		position: absolute;
-		display: block;
-		visibility: visible;
-		font-size: 1em;
 	}
 	.logo{
 		margin-left: 0px;
@@ -364,7 +374,7 @@ nav{
 
 nav img{
 	height: 75px;
-	margin-left: 2%;
+	margin-left: 10%
 }
 
 nav a{
@@ -379,7 +389,7 @@ nav a{
 }
 
 nav a:hover{
-	color: silver;
+	color: #F2994A;
 }
 
 .fixed{
@@ -389,11 +399,17 @@ nav a:hover{
 }
 
 .hide-menu a:last-child{
-	height: 80px;
+	height: 30px;
 	background-color: #fb8f3a;
-	padding: 20px 30px 20px 30px;
+	padding: 5px 30px 35px 30px;
 	float: right;
+	margin-top: 20px;
 	margin-left: 0px;
+	background-blend-mode: color-dodge;
+}
+
+.hide-menu a:last-child:hover{
+	color: #fff;
 }
 .hide-menu{
 	padding-left: 80px;
@@ -417,7 +433,6 @@ nav a:hover{
     display: block;
     width: 30px;
     height: 5px;
-    border-radius: 2px;
     margin-top: -2px;
     background-color: #F2994A;
     font-size: 0px;
@@ -432,7 +447,6 @@ nav a:hover{
     right: 0;
     background: #F2994A;
     content: '';
-    border-radius: 2px;
     transition: transform 0.3s;
 }
 
@@ -479,26 +493,33 @@ nav a:hover{
 }
 
 .toggle-menu1 .menu-button a{
+	display: block;
 	height: 50px;
-	width: 250px;
+	width: 70%;
 	background-color: #F2994A;
-	margin: 10px auto 0 auto;
+	margin: 10px 15% 0 15%;
 	padding-top: 10px;
 	color: #fff;
 	box-shadow: 0px 5px 5px rgba(0,0,0, 0.4);
 }
 
-.number-container{
+#close{
+	background-image: url(images/close.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.number-cont{
+	display: none;
 	text-align: center;
 	height: 80px;
 }
 
 .number-menu{
-	visibility: hidden;
-	line-height: 3.4em;
+	line-height: 4em;
 	padding-bottom: 23px;
 	height: 80px;
-	font-size: 1.4em;
+	font-size: 1.2em;
 	top: 20px;
 	border-bottom: 4px solid #F2994A;
 	color: #fff;
@@ -509,14 +530,11 @@ nav a:hover{
 	top: 5px;
 }
 .logo-menu img{
-	height: 70px;
+	height: 80px;
 }
 
 @media screen and (max-width: 980px)
 {
-	.hide-menu a:last-child{
-		padding: 20px 15px;
-	}
 	nav a{
 		margin-left: 3%;
 		font-size: 18px;
@@ -533,9 +551,8 @@ nav a:hover{
 
 @media screen and (max-width: 784px)
 {
-
-	.number-menu{
-		visibility: visible;
+	.number-cont{
+		display: block;
 	}
 	.hide-menu img{
 		display: block;
@@ -742,7 +759,8 @@ hr{
 
 /*Подвал*/
 footer{
-	background-color:  #dcdcdc;
+	background-color:   #4b4b4b;
+	color: #fff;
 }
 
 .copyright, .company, .soc-networks{
@@ -752,6 +770,14 @@ footer{
 
 .copyright img{
 	height: 40px;
+}
+
+.copyright a{
+	color: #FFF;
+}
+
+.copyright a:hover{
+	color: #F2994A;
 }
 
 .soc-networks a{ 
@@ -766,6 +792,7 @@ footer{
 
 #vk{
 	background-image: url(images/vk-gray.png);
+	margin-left: 20px;
 }
 	#vk:hover{
 		background-image: url(images/vk-hover.png);

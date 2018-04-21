@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="style.css">
 
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
 
 	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
 	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
@@ -23,7 +24,7 @@
     		<input id="name" type="text" name="name" placeholder="Введите ФИО" style="width: 100%" required>
     		<input type="text" name="mail" placeholder="Введите Email" style="width: 100%" required>
     		<textarea name="message" placeholder="Введите сообщение" style="width: 100%" rows="4" required></textarea>
-    		<span>Я согласен на обработку персональных данных</span><input id="check" type="checkbox">
+    		<span>Я согласен на обработку персональных данных</span><input id="check" type="checkbox" checked>
     		<br><br>
     		<button>Отправить</button>
     	</form>
@@ -43,19 +44,19 @@
 					<div class="top-item"><span>ул. Танкистов 90А</span></div>
 					<a href="#" class="bt-menu-trigger"><span>Menu</span></a>
 
-					<ul class="toggle-menu">
+					<ul class="toggle-menu animated slideInRight">
 						<li><a href="#about" onclick="hide1()">О нас</a></li>
 						<li><a href="#objects" onclick="hide1()">Наши объекты</a></li>
 						<li class="menu-button"><a href="#form" class="popup" onclick="hide1()">Написать нам</a></li>
 						<li><a href="#reviews" onclick="hide1()">Отзывы</a></li>
 						<li><a href="#contacts" onclick="hide1()">Контакты</a></li>
-						<li>Закрыть</li>
+						<li><a href="#" id="close" onclick="hide1()"></a></li>
 					</ul>
 				</div>
 			</div>
 
 			<!-- Слоган компании -->
-			<div class="slogan">
+			<div class="slogan animated fadeInDown">
 				<span>Аренда коммерческой недвижимости в Саратове</span>
 			</div>
 
@@ -82,10 +83,11 @@
 		</div>
 	</header>
     
-    <nav id="menu1">
+    <nav id="menu1" class="animated fadeInDown">
     	<div class="logo-menu">
     		<img src="images/logo.png">
     	</div>
+    	<div class="number-cont"><span class="number-menu">+79658847968</span></div>
     	<div class="hide-menu">
     		<a href="#about">О нас</a>
     		<a href="#objects">Наши объекты</a>
@@ -93,15 +95,14 @@
     		<a href="#contacts">Контакты</a>
     		<a href="#form" class="popup">Написать нам</a>
     	</div>
-    	<div class="number-container"><span class="number-menu">+79658847968</span></div>
     	<a href="#" class="hamburger"><span>Menu</span></a>
-    	<ul class="toggle-menu1">
+    	<ul class="toggle-menu1 animated slideInRight">
 			<li><a href="#about" onclick="hide()">О нас</a></li>
 			<li><a href="#objects" onclick="hide()">Наши объекты</a></li>
 			<li class="menu-button"><a href="#form" class="popup" onclick="hide()">Написать нам</a></li>
 			<li><a href="#reviews" onclick="hide()">Отзывы</a></li>
 			<li><a href="#contacts" onclick="hide()">Контакты</a></li>
-			<li>Закрыть</li>
+			<li><a href="#" id="close" onclick="hide()"></a></li>
 		</ul>
     </nav>
 
@@ -213,10 +214,10 @@
         				<iframe src="https://yandex.ru/map-widget/v1/-/CBe~m-GboC" width="100%" height="400" frameborder="0"></iframe>
         			</div>
         			<div class="col-sm-12 col-xs-12 col-md-4 col-lg-4 contacts">
-        				<p><b>Стац. телефон:</b> 8(8452)12-34-56</p>
-        				<p><b>Моб. телефон:</b> 8(8452)12-34-56</p>
+        				<p><b>Стац. телефон:</b> 8(8452)55-79-57</p>
+        				<p><b>Моб. телефон:</b> +79658847968</p>
         				<p><b>Адрес:</b> ул. Танкистов 90А</p>
-        				<p><b>Email:</b> komplekt64@info.ru</p>
+        				<p><b>Email:</b> info@komplekt64.ru</p>
         				<a href="#form" class="contacts-button popup">
         					Написать нам
         				</a>
@@ -231,7 +232,7 @@
 			<div class="row">
 				<div class="col-md-4 col-lg-4 copyright">
 					<h5>
-						<img src="images/daqwin.png"> Design by daqwin
+						<a href="https://daqwin.com"><img src="https://daqwin.com/templates/images/logog.png">Design by daqwin</a>
 					</h5>
 				</div>
 				<div class="col-md-4 col-lg-4 company">
@@ -243,9 +244,9 @@
 					<h5>
 						Социальные сети
 					</h5>
-					<a href="#" id="vk"></a>
-					<a href="#" id="instagram"></a>
-					<a href="#" id="twitter"></a>
+					<a href="https://vk.com/komplekt64" id="vk"></a>
+					<a href="https://www.instagram.com/komplekt64" id="instagram"></a>
+					<a href="https://twitter.com/komplekt64" id="twitter"></a>
 				</div>
 			</div>
 		</div>
