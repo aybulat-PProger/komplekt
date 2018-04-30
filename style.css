@@ -7,43 +7,43 @@ body {
 }
 
 form{
-	padding: 50px 20px;
-	background-color: #fff;
-	max-width: 320px;
-	margin:auto;
 	position: relative;
-	border-radius: 10px;
-	background-color:  #fcc76b ;
-	border: 2px solid #fb8f3a;
-	z-index: 1000;
+	margin: auto;
+	background-color: #fff;
+	width: 300px;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
 }
-
-form p{
-	width: 100%;
-	text-align: center;
+form .form-header{
+	line-height: 50px;
+	background-color: #F2994A;
+	height: 50px;
+	color: #fff;
+	padding-left: 15px;
 	margin-bottom: 10px;
 }
-
-form hr{
-        width: 100%;
-        border-width: 1px;
-        border-color: #fb8f3a;
-      }
-
-form input{
-	width: 200px;
-	margin-bottom: 10px;
-	border-radius: 5px;
-	border: 2px solid #fb8f3a;
+form #name, form #mail, form textarea{
+	margin-top: 5px;
+	width: 270px;
+	display: block;
+	margin-bottom: 15px;
+	border: silver 1px solid;
+	box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.2);
 }
-
-form textarea{
-	border-radius: 5px;
-	border: 2px solid #fb8f3a;
+form #name, form #mail, form span, form textarea, form .agreement, form button{
+	margin-left: 15px;
 }
-
 form span{
-	font-size: 1em;
+	color:#F2994A;
+}
+form button{
+	margin-top: 10px;
+	margin-bottom: 20px;
+	background-color: #F2994A;
+	border: none;
+	height: 35px;
+	color: #fff;
+	cursor: pointer;
+	padding: 0px 20px;
 }
 
 form #check{
@@ -53,20 +53,6 @@ form #check{
 	position: relative;
 }
 
-form button{
-	margin: 0 auto;
-	display: block;
-	width: 150px;
-	background-color: #fb8f3a;
-	padding:10px 15px;
-	text-decoration: none;
-	text-align: center;
-	font-size: 1.2em;
-	color: #fff;
-	border-radius: 10px;
-	border: none;
-	cursor: pointer;
-}
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
@@ -98,6 +84,20 @@ header{
 	background-size: cover;
 	background-position: center;
 	background-image: url(images/bg-blur.jpg);
+}
+
+.button-up{
+	position: fixed;
+	z-index: 10;
+	bottom: 20px;
+	right: 20px;
+	height: 70px;
+	width: 70px;
+}
+
+.button-up img{
+	height: 100%;
+	width: 100%;
 }
 
 .mask{
@@ -247,8 +247,77 @@ header{
 	color: #fff;
 	font-size: 2.5em;
 }
+/*Верхние текст в хедере*/
 
+.bottom-content{
+	position: absolute;
+	bottom: 80px;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	font-size: 2em;
+}
 
+.base{
+	padding-top: 50px;
+	margin-bottom: 50px;
+	float: left;
+	width: 30%;
+}
+
+.market{
+	padding-top: 50px;
+	display: inline-block;
+	margin-bottom: 50px;
+	float: right;
+	width: 30%;
+}
+
+.soc-networks-header{
+	width: 40%;
+	float: left;
+}
+
+.soc-networks-header a{
+	background-position: center;
+	background-size: cover;
+	float: left;
+	display: block;
+	width: 70px;
+	height: 70px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.soc-networks-cont{
+	padding-bottom: 100px;
+	height: 60px;
+	width: 260px;
+	margin: 0 auto;
+}
+
+#vk-header{
+	background-image: url(images/vk-gray.png);
+}
+	#vk-header:hover{
+		background-image: url(images/vk-hover.png);
+	}
+#instagram-header{
+	background-image: url(images/instagram-gray.png);
+}
+	#instagram-header:hover{
+		background-image: url(images/instagram-hover.png);
+	}
+
+#twitter-header{
+	background-image: url(images/twitter-gray.png);
+	height: 60px;
+	width: 60px;
+	margin-top: 5px;
+}
+	#twitter-header:hover{
+		background-image: url(images/twitter-hover.png);
+	}
 /*Нижнее меню навигации*/
 
 .header-menu{
@@ -310,6 +379,12 @@ header{
 		display: none;
 		visibility: hidden;
 	}
+	.number{
+		position: absolute;
+		display: block;
+		visibility: visible;
+		font-size: 1em;
+	}
 	.top-contacts{
 		position: absolute;
 		width: 100%;
@@ -318,14 +393,14 @@ header{
 		width: 100%;
 	}
 	.logo{
-		margin-left: 0px;
+		margin-left: 5px;
 	}
 }
 
 @media screen and (max-width: 768px)
 {
 	.slogan{
-		font-size: 2.3em;
+		font-size: 2em;
 	}
 	.header-menu{
 		display: none
@@ -350,6 +425,9 @@ header{
 		width: 100%;
 		display: block;
 		color: #fff;
+	}
+	.button-up{
+		visibility: hidden;
 	}
 }
 
@@ -511,16 +589,14 @@ nav a:hover{
 
 .number-cont{
 	display: none;
+	visibility: hidden;
 	text-align: center;
-	height: 80px;
 }
 
-.number-menu{
+.number-cont span{
 	line-height: 4em;
 	padding-bottom: 23px;
-	height: 80px;
 	font-size: 1.2em;
-	top: 20px;
 	border-bottom: 4px solid #F2994A;
 	color: #fff;
 }
@@ -529,7 +605,12 @@ nav a:hover{
 	position: absolute;
 	top: 5px;
 }
-.logo-menu img{
+
+.logo-menu a{
+	padding-top: 0;
+}
+
+.logo-menu a img{
 	height: 80px;
 }
 
@@ -553,6 +634,7 @@ nav a:hover{
 {
 	.number-cont{
 		display: block;
+		visibility: visible;
 	}
 	.hide-menu img{
 		display: block;
@@ -560,6 +642,19 @@ nav a:hover{
 	.hide-menu{
 		display: none;
 		visibility: hidden;
+	}
+	.market{
+		font-size: 0.6em;
+		width: 50%;
+		margin-bottom: 10px;
+	}
+	.base{
+		font-size: 0.6em;
+		width: 50%;
+		margin-bottom: 10px;
+	}
+	.soc-networks-header{
+		display: none;
 	}
 }
 
@@ -603,8 +698,10 @@ hr{
 	width: 90%;
 	margin: 0 auto;
 }
-.object img{
-	width: 100%;
+.object .img{
+	min-height: 200px;
+	background-position: center;
+	background-size: cover;  
 }
 .object h4{
 	margin-top: 20px;
@@ -623,11 +720,16 @@ hr{
 .object a{
 	display: block;
 	margin: 0px auto 20px auto;
-	color:black;
+	color: #fff;
 	width: 100px;
 	background-color: #fb8f3a;
 	text-align: center;
 	padding: 10px 0px;
+	box-shadow: 0px 5px 5px 0px #fe8526;
+}
+
+.object a:hover{
+	background-color: #fd9e54;
 }
 
 .object h4, h5, p{
@@ -728,6 +830,12 @@ hr{
   cursor:pointer;
   transition:800ms ease all;
   outline:none;
+}
+
+.reviews .contacts-button{
+	margin-top: 100px;
+	margin: 0 auto;
+	max-width: 300px;
 }
 
 .contacts-button:hover{

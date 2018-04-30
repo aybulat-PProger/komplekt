@@ -2,14 +2,14 @@
             foreach ($objects as $obj) {
         ?>
                         <div class="object">
-                            <img src="images/<?=$obj['main_img']?>">
+                            <div class="img" style="background-image: url(images/<?=$obj['main_img']?>);"></div>
                                 <h4>
                                     <b>
                                         <?=$obj['space']?> кв.м.
                                     </b>
                                 </h4>
                                 <h5>
-                                    <?=$obj['price']?>
+                                    <?=$obj['price']?> р./мес.
                                 </h5>
                                 <p>
                                     <?=$obj['short_description']?>

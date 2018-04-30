@@ -18,17 +18,33 @@
 <body>
 
 	<div class="hidden">
-    	<form id="form">
-    		<p>Форма заявки</p>
-      		<hr>
-    		<input id="name" type="text" name="name" placeholder="Введите ФИО" style="width: 100%" required>
-    		<input type="text" name="mail" placeholder="Введите Email" style="width: 100%" required>
-    		<textarea name="message" placeholder="Введите сообщение" style="width: 100%" rows="4" required></textarea>
-    		<span>Я согласен на обработку персональных данных</span><input id="check" type="checkbox" checked>
-    		<br><br>
-    		<button>Отправить</button>
-    	</form>
+		<form id="form">
+			<div class="form-header">Форма заявки</div>
+			<span>Введите ФИО</span><br>
+			<input id="name" type="text" name="name" required>
+			<span>Введите email</span><br>
+			<input id="mail" type="text" name="mail" required>
+			<span>Сообщение</span><br>
+			<textarea name="message" rows="6" required></textarea>
+			<div class="agreement">Я согласен на обработку персональных данных<input id="check" type="checkbox" checked></div>
+			<button type="submit">Отправить</button>
+		</form>
     </div>
+
+
+    <div class="hidden">
+		<form id="form-review">
+			<div class="form-header">Форма отзыва</div>
+			<span>Введите ФИО</span><br>
+			<input id="name" type="text" name="name" required>
+			<span>Сообщение</span><br>
+			<textarea name="message" rows="6" required></textarea>
+			<div class="agreement">Я согласен на обработку персональных данных<input id="check" type="checkbox" checked></div>
+			<button type="submit">Оставить отзыв</button>
+		</form>
+    </div>
+
+    <a href="" class="button-up scrollup"><img src="images/up.png"></a>
 
 	<header>
 		<div class="mask">
@@ -63,9 +79,15 @@
 			<!-- Соц сети и два текстовых объекта -->
 
 			<div class="bottom-content">
-				<div class=""></div>
-				<div class=""></div>
-				<div class=""></div>
+				<div class="base">Широкая база</div>
+				<div class="soc-networks-header">
+					<div class="soc-networks-cont">
+						<a href="https://vk.com/komplekt64" id="vk-header"></a>
+						<a href="https://www.instagram.com/komplekt64" id="instagram-header"></a>
+						<a href="https://twitter.com/komplekt64" id="twitter-header"></a>
+					</div>
+				</div>
+				<div class="market">На рынке с 1991г.</div>
 			</div>
 
 			<!-- Нижнее меню навигации -->
@@ -85,9 +107,9 @@
     
     <nav id="menu1" class="animated fadeInDown">
     	<div class="logo-menu">
-    		<img src="images/logo.png">
+    		<a href="#" class="scrollup"><img src="images/logo.png"></a>
     	</div>
-    	<div class="number-cont"><span class="number-menu">+79658847968</span></div>
+    	<div class="number-cont"><span>+79658847968</span></div>
     	<div class="hide-menu">
     		<a href="#about">О нас</a>
     		<a href="#objects">Наши объекты</a>
@@ -200,6 +222,9 @@
         			</div>
         		</div>
         	</div>
+        	<a href="#form-review" class="contacts-button popup">
+        		Написать отзыв
+        	</a>
     </section>
 
     <section id="contacts" class="contacts-section">
@@ -232,7 +257,7 @@
 			<div class="row">
 				<div class="col-md-4 col-lg-4 copyright">
 					<h5>
-						<a href="https://daqwin.com"><img src="https://daqwin.com/templates/images/logog.png">Design by daqwin</a>
+						<a href="https://daqwin.com"><img src="https://daqwin.com/templates/images/logog.png"> Design by daqwin</a>
 					</h5>
 				</div>
 				<div class="col-md-4 col-lg-4 company">
@@ -333,8 +358,8 @@
         	<script type="text/javascript">
         		$(document).ready(function(){
         			$(".popup").magnificPopup({
-        				type: 'inline',
-        				focus: '#name'
+        				focus: '#name',
+        				type: 'inline'
         			});
 
         			$("#form").submit(function(){
@@ -368,6 +393,10 @@
             		$('.toggle-menu').hide();
             	else
             		$('.toggle-menu').show();
+        	}
+
+        	function closeForm(){
+        		$('#form').hide(); 
         	}
 
             $('.bt-menu-trigger').click(function(){
@@ -422,6 +451,18 @@
 					var id  = $(this).attr('href'),
 					top = $(id).offset().top;
 					$('body,html').animate({scrollTop: top}, 1500);
+				});
+				$(window).scroll(function(){
+					if ($(this).scrollTop() > 100) {
+						$('.scrollup').fadeIn();
+					} else {
+						$('.scrollup').fadeOut();
+					}
+				});
+
+				$('.scrollup').click(function(){
+					$("html, body").animate({ scrollTop: 0 }, 600);
+					return false;
 				});
 			});
 		</script>
