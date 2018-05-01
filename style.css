@@ -85,7 +85,6 @@ header{
 	background-position: center;
 	background-image: url(images/bg-blur.jpg);
 }
-
 .button-up{
 	position: fixed;
 	z-index: 10;

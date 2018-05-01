@@ -7,15 +7,29 @@
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="style.css">
-
+	<link rel="stylesheet" type="text/css" href="preloader-style.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
 
 	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
 	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
-	<link rel="stylesheet" type="text/css" href="magnific-popup/magnific-popup.css">		
+	<link rel="stylesheet" type="text/css" href="magnific-popup/magnific-popup.css">	
+	<script type="text/javascript" src="libs/jquery-2.0.2.min.js"></script>
+	<script type="text/javascript" src="libs/main.js"></script>
 
 </head>
 <body>
+
+
+	<div id="loading">
+		<div id="loading-center">
+			<div id="loading-center-absolute">
+				<div class="preloader" id="preloader_one"></div>
+				<div class="preloader" id="preloader_two"></div>
+				<div class="preloader" id="preloader_three"></div>
+				<div class="preloader" id="preloader_four"></div>
+			</div>
+		</div>
+	</div>
 
 	<div class="hidden">
 		<form id="form">
@@ -293,6 +307,7 @@
 		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<script type="text/javascript" src="slick/slick.min.js"></script>
 		<script type="text/javascript" src="magnific-popup/jquery.magnific-popup.min.js"></script>
+		
 		<script type="text/javascript">
 			$(document).ready(function(){
 				
@@ -428,6 +443,7 @@
 
 		<script type="text/javascript">
 			$(document).ready(function(){
+				$('.scrollup').hide();
 				$("#menu").on("click","a", function (event) {
 					event.preventDefault();
 					var id  = $(this).attr('href'),
@@ -455,13 +471,14 @@
 				$(window).scroll(function(){
 					if ($(this).scrollTop() > 100) {
 						$('.scrollup').fadeIn();
-					} else {
+					} 
+					else {
 						$('.scrollup').fadeOut();
 					}
 				});
 
 				$('.scrollup').click(function(){
-					$("html, body").animate({ scrollTop: 0 }, 600);
+					$("html, body").animate({ scrollTop: 0 }, 1500);
 					return false;
 				});
 			});
